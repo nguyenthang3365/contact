@@ -37,6 +37,17 @@
         <% if(dulieu.length == 0){%>
         <h3 class="text-danger">không có dữ liệu tồn tại</h3>
         <%}%>
+
+        <% 
+           for (i=1 ; i<=countpage; i++){
+               if(i==active){
+        %>
+        <a class="btn btn-outline-danger" href="/xem?page=<%= i %>"><%= i %></a>
+        <%} else{%>
+            <a class="btn btn-outline-info" href="/xem?page=<%= i %>"><%= i %></a>
+            <%} %>
+        <%} %>
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
